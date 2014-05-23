@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <body>
+<img src="{% static 'images/Aakash_logo.png' %}" alt="AAKASH" />
+<div class="divs">
 List of coordinators
+
+<br /><br/>
 {% if coords %}
-<ul>
+<link rel="stylesheet" type="text/css" href="{% static 'css/list-style.css' %}">
+<ul class = "coords-list">
 {% for c in coords %}
 <li>
 {{ c.name }}
@@ -12,8 +18,13 @@ List of coordinators
 </ul>
 {% endif %}
 {% if rc %}
+</div>
+<br />
+<div class ="divs">
 List of Remote Centres
-<ul>
+
+<br /><br />
+<ul class="rc-list">
 {% for rc in rc %}
 <li>
 {{ rc }}
@@ -21,5 +32,6 @@ List of Remote Centres
 {% endfor %}
 </ul>
 {% endif %}
+</div>
 </body>
 </html>
