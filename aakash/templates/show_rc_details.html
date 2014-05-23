@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+List of coordinators
+{% if coords %}
+<ul>
+{% for c in coords %}
+<li>
+{{ c.name }}
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% if rc %}
+List of Remote Centres
+<ul>
+{% for rc in rc %}
+<li>
+{{ rc }}
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>
